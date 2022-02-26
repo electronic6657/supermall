@@ -1,7 +1,9 @@
 <template>
   <div id="app">
+    <keep-alive  exclude="Detail">
     <router-view></router-view>
-    <main-tabbar/>
+    </keep-alive>
+    <main-tabbar v-if="$route.meta.footShow"/>
   </div>
 </template>
 <script>
