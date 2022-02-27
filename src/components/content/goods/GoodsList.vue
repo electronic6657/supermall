@@ -9,7 +9,12 @@ import GoodsListItem from "./GoodsListItem";
 export default {
   name: "GoodsList",
   props:{
-    goods:Array
+    goods:{
+      type:Array,
+      detail:{
+        return: []
+      }
+    }
   },
   components:{
     GoodsListItem

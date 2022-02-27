@@ -69,7 +69,8 @@ export default {
       isshowcontent: false,
       taboffsettop: 0,
       isTabFixd: false,
-      SaveY: 0
+      SaveY: 0,
+      ItemImageListener:null
     }
   },
   created() {
@@ -177,6 +178,8 @@ export default {
   },
   deactivated(){
     this.SaveY = this.$refs.scroll.GetScrollY()
+    this.$bus.$off('ItemImageLoad',this.ItemImageListener)
+
   }
 }
 
